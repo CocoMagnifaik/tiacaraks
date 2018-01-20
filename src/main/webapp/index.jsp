@@ -1,10 +1,10 @@
 <%@page import="com.mongodb.DBObject"%>
 <%@page import="com.mongodb.BasicDBObject"%>
 <%@page import="com.mongodb.DB"%>
-<%@page import="org.mongodb.ConnectionBase"%>
+<%@page import="main.java.org.mongodb.ConnectionBase"%>
 <%@page import="com.mongodb.DBCollection"%>
 <%@page import="com.mongodb.DBCursor"%>
-<%@page import="org.mongodb.Customers"%>
+<%@page import="main.java.org.mongodb.Customers"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
    "http://www.w3.org/TR/html4/loose.dtd">
