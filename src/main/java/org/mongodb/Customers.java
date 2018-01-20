@@ -1,4 +1,4 @@
-package org.mongodb;
+package main.java.org.mongodb;
 
 import com.mongodb.BasicDBObject;
 import com.mongodb.DB;

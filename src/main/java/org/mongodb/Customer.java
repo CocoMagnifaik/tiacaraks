@@ -1,4 +1,4 @@
-package org.mongodb;
+package main.java.org.mongodb;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
