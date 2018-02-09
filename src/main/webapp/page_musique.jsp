@@ -44,9 +44,6 @@
                 
                 musique.insertMusique(categorie, artiste, titre, fichier, paroles);
             }
-            else {
-                out.println("Noob");
-            }
         %>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
