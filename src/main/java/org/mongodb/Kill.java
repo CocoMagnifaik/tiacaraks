@@ -29,10 +29,8 @@ public class Kill {
 			//user.updateUsers("Rakoto", "Rakotozandry");
 
                     JeuDAO jeu = new JeuDAO();
-                    Jeu[] j = jeu.getCountStatistique("Tsy atakaloko");
-                    for(int i = 0; i < us1.length; i++){
-                        System.out.println(j[i].getIdChanson());
-                    }
+                    Jeu[] j = jeu.findJeuWhereChanson("Tsy atakaloko");
+                        System.out.println(j[j.length-1].getCount());
                 } catch (UnknownHostException e) {
 	    } catch (MongoException e) {
 	    }

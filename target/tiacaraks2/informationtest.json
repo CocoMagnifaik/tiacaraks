@@ -1,0 +1,214 @@
+{
+    "playlist": [
+        {
+            "categorie": "Malagasy",
+            "chanson": [
+                {
+                    "artiste": "Dadi Love",
+                    "titre": "Tsy atakaloko",
+                    "fichier": "Tsy atakaloko.mp3",
+					"paroles":"Na volamena aman-kariagna atao eo Tsy mety ... anao Na mpanambola io ia tsy mila e ! Fa anao ... fo tiako Zaho manana agnao ndro mahery e ! Zaho ... agnao tsy very Zaho manana agnao hasambaragne Fitiavako agnao, ... zah",
+					"reponse": [
+						{
+							"vrai":"atakaloko"
+						},
+						{
+							"vrai":"zaraiky"
+						},
+						{
+							"vrai":"manana"
+						},
+						{
+							"vrai":"mahadala"
+						}
+					]
+				},
+                {
+                    "artiste": "Ambondrona",
+                    "titre": "Leo",
+                    "fichier": "Leo.mp3",
+					"paroles":"Lasa tsy hita any ho any Lasa tsy noraràna Lasa fa tsy ... Lasa tsy tàna, Safidy ny azy, leo hono izy fa ny fo Nandaho ka atao ahoana moa, Sitrapo sy safidin’ny fo! Nilaozany, avokoa Tsy nisy ... Na ny ratsy na ny soa Izay koa no ..., Manirery tokoa ary Niseho tsy nivaky loha Mahatsiaro ... Voadona ery ty fo!",
+					"reponse": [
+						{
+							"vrai":"tamana"
+						},
+						{
+							"vrai":"napetrany"
+						},
+						{
+							"vrai":"fetrany"
+						},
+						{
+							"vrai":"marary"
+						}
+					]
+                },
+				{
+					"artiste": "Stephanie",
+                    "titre": "Mahatsiaro",
+                    "fichier": "Mahatsiaro.mp3",
+					"paroles":"Lay mbo an-tsaiko ato tsy afoizako anao reny e! Tsaroako iaby soa nifanaovantsika Lay mbo am-poko ato iaby ... reny e! Tadidiko soa mifanao kiboday Zaho koa laha fa nianganao tiako ô Njangobo zaho ato lay matety fahe Zaho koa laha fa nialanao tiako ô Tsy ... enteha zaho lay tsy nomen-droa Laha fa avy ty harivariva Mahatsiaro ... re zaho Laha fa mipaiky ty tsofots'anjo Manimany ... re zaho Laha fa avy ty harivariva Mahatsiaro safosafonao re zaho Laha fa mipaiky ty tsofots'anjo Manimany fisantsika re zaho",
+					"reponse": [
+						{
+							"vrai":"atakaloko"
+						},
+						{
+							"vrai":"matavy"
+						},
+						{
+							"vrai":"safosafonao"
+						},
+						{
+							"vrai":"fisantsika"
+						}
+					]
+				},
+				{
+					"artiste": "'Zay",
+                    "titre": "Nolalovanao",
+                    "fichier": "Nolalovanao.mp3",
+					"paroles":"Lay nofinofy mamiko hatrizay Lay noheveriko tsy ho ... intsony Hoe iaina an'ity fitiavana iray toy ny anaty horonan-tsary Nolalovanao vao ... fa hay lay ... iray ho tanteraka amizay Nolalovanao ka fantatro fa ianao ilay ... iray tanaty nofiko hatrizay",
+					"reponse": [
+						{
+							"vrai":"to"
+						},
+						{
+							"vrai":"tsapako"
+						},
+						{
+							"vrai":"nofinofy"
+						},
+						{
+							"vrai":"fitiavana"
+						}
+					]
+				},
+				{
+					"artiste": "Zopanage",
+                    "titre": "Namana",
+                    "fichier": "Namana.mp3",
+					"paroles":"Aty antany lavitra aho No mihira ho an'... Ialahy 'lay namako taloha Nanembona ny ditra niarahana tamin'ialahy Ka ... aho ankehitriny Fa ialahy no ... satria Na lavitra ahy aza aty Tsy misy ataoko ambony noho ialahy Ho ... rehefa manimanina Ho antsoiko rehefa manimanina",
+					"reponse": [
+						{
+							"vrai":"ialahy"
+						},
+						{
+							"vrai":"nivavabavaka"
+						},
+						{
+							"vrai":"namako"
+						},
+						{
+							"vrai":"antsoiko"
+						}
+					]
+				}			
+            ]
+        } ,
+		{
+            "categorie": "Francais",
+            "chanson": [
+                {
+                    "artiste": "Notre dame de Paris",
+                    "titre": "Belle",
+                    "fichier": "Belle.mp3",
+					"paroles":"Belle, c'est un mot qu'on dirait inventé pour elle Quand elle danse et qu'elle met son corps à jour Tel un ... qui étend ses ailes pour s'envoler Alors je sens l'enfer s'ouvrir sous mes pieds J'ai posé mes yeux sous sa robe de ... A quoi me sert encore de prier Notre-Dame? Quel Est celui qui lui jettera la première ...? Celui-là ne mérite pas d'être sur terre Ô Lucifer! Oh! Laisse-moi rien qu'une fois ... mes doigts dans les cheveux d'Esmeralda",
+					"reponse": [
+						{
+							"vrai":"oiseau"
+						},
+						{
+							"vrai":"gitane"
+						},
+						{
+							"vrai":"pierre"
+						},
+						{
+							"vrai":"Glisser"
+						}
+					]
+				},
+                {
+                    "artiste": "Les dix commandements",
+                    "titre": "L'envie d'aimer",
+                    "fichier": "L'envie d'aimer.mp3",
+					"paroles":"C'est tellement ... L'amour Tellement ... L'amour À qui l'entend Regarde autour À qui le veut Vraiment Ce sera nous, dès ... Ce sera nous, le chemin Pour que l'amour Qu'on saura se ... Nous donne l'envie d'aimer",
+					"reponse": [
+						{
+							"vrai":"simple"
+						},
+						{
+							"vrai":"possible"
+						},
+						{
+							"vrai":"demain"
+						},
+						{
+							"vrai":"donner"
+						}
+					]
+                },
+				{
+					"artiste": "Ben L'Oncle Soul",
+                    "titre": "Soulman",
+                    "fichier": "Soulman.mp3",
+					"paroles":"J'ai pas le ... de Spike Lee J'ai pas le génie de De Vinci J'ai pas les pieds sur terre La patience de ma banquière J'ai pas ces choses-là. J'ai pas la ... de Gandhi L'assurance de Mohamed Ali J'ai pas l'âme d'un ... La bonté de l'Abbé Pierre Ni le ra de Guevara. Je ne suis qu'un soul man Écoute ça baby. Je suis pas un superman Loin de là. Juste moi, mes délires Je n'ai rien d'autre à ... Mais je sais qu'en vrai c'est déjà ça.",
+					"reponse": [
+						{
+							"vrai":"regard"
+						},
+						{
+							"vrai":"sagesse"
+						},
+						{
+							"vrai":"gangster"
+						},
+						{
+							"vrai":"offrir"
+						}
+					]
+				},
+				{
+					"artiste": "Johnny Hallyday",
+                    "titre": "Un jour viendra",
+                    "fichier": "Un jour viendra.mp3",
+					"paroles":"Un jour viendra tu me diras je t'aime Du ... du cœur Mais le dire quand même Un simple mot, et l'aveu D'une larme au bord de tes yeux Feront de moi un homme ... Toi c'est le ciel qui t'a envoyée Vers moi pour me réapprendre à ... Attends, laisse faire les jours Laisse le temps au temps, et à l'amour Un jour viendra tu me diras je t'aime Et j'...",
+					"reponse": [
+						{
+							"vrai":"bout"
+						},
+						{
+							"vrai":"heureux"
+						},
+						{
+							"vrai":"aimer"
+						},
+						{
+							"vrai":"aimerai"
+						}
+					]
+				},
+				{
+					"artiste": "Roch Voisine",
+                    "titre": "Helene",
+                    "fichier": "Helene.mp3",
+					"paroles":"Seul sur le sable les yeux dans l'eau Mon rêve était trop ... L'été qui s'achève tu partiras A cent mille lieues de moi Comment oublier ton ... Et tellement de souvenirs Hélène things you do make me crazy about you Pourquoi tu pars reste ici j'ai tant besoin d'une ... Hélène things you do make me crazy about you Pourquoi tu pars si loin de moi La où le ... te porte loin de mon coeur qui bat",
+					"reponse": [
+						{
+							"vrai":"beau"
+						},
+						{
+							"vrai":"sourire"
+						},
+						{
+							"vrai":"amie"
+						},
+						{
+							"vrai":"vent"
+						}
+					]
+				}				
+            ]
+        }
+    ]
+}

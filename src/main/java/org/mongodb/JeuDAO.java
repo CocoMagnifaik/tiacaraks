@@ -108,22 +108,23 @@ public class JeuDAO {
                 DBCollection table = db.getCollection("jeu");
                 cursor = table.find();
                 DBObject dObject=null;
+                int count = 0;
                 while (cursor.hasNext()) {
                     dObject = cursor.next();
                     String id = String.valueOf((ObjectId)(dObject.get("_id")));
                     String idJoueur = String.valueOf(dObject.get("joueur"));
                     idChanson = String.valueOf(dObject.get("chanson"));
                     String points = String.valueOf(dObject.get("points"));
-
-                    Jeu temporaire = new Jeu(id, idJoueur, idChanson, points);
+                    Jeu temporaire = new Jeu(id, idJoueur, idChanson, points, count);
                     listMusic.add(temporaire);
+                    count++;
                 }
                 tabJeu = new Jeu[listMusic.size()];
                 listMusic.copyInto(tabJeu);
             } catch(MongoException e){
                 e.printStackTrace();
             }
-            return tabJeu;		
+            return tabJeu;
         }
 
     public void insertJeu(String idJoueur, String idChanson, String points) throws Exception{

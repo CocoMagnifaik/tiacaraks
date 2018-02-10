@@ -14,12 +14,29 @@ public class Jeu {
     private String idJoueur;
     private String idChanson;
     private String points;
+    private int count;
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
 
     public Jeu(String id, String idJoueur, String idChanson, String points) {
         this.id = id;
         this.idJoueur = idJoueur;
         this.idChanson = idChanson;
         this.points = points;
+    }
+
+    public Jeu(String id, String idJoueur, String idChanson, String points, int count) {
+        this.id = id;
+        this.idJoueur = idJoueur;
+        this.idChanson = idChanson;
+        this.points = points;
+        this.count = count;
     }
 
     public String getId() {
