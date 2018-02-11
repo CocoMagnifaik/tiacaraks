@@ -38,8 +38,8 @@
         <%
             MusiqueDAO musique = new MusiqueDAO();
             Musique[] musicTable = musique.listMusique();
-            JeuDAO jeu = new JeuDAO();
-            Jeu[] jeuTable = null;
+                JeuDAO jeu = new JeuDAO();
+                    Jeu[] jeuTable = null;
         %>
 </head>
 <body class="hold-transition skin-blue sidebar-mini">
@@ -189,9 +189,6 @@
             <div class="box-header">
               <h3 class="box-title">Statistique</h3>
               <div class="pull-right box-tools">
-                <button type="button" class="btn btn-info btn-sm" data-widget="remove" data-toggle="tooltip"
-                        title="Remove">
-                  <i class="fa fa-times"></i></button>
               </div>
             </div>
             <div class="box-body">
@@ -206,9 +203,10 @@
                                 ["Element", "Nombre de jeu", {role: "style"}],
                                 <%  for(int i = 0; i < musicTable.length; i++) {   
                                         jeuTable = jeu.findJeuWhereChanson(musicTable[i].getTitre());
-                                    } %>
-                                        ["<% out.print(jeuTable[jeuTable.length-1].getIdChanson());%>", <% out.print(jeuTable[jeuTable.length-1].getCount());%>, ""], %>
-                            ]);
+                                %>
+                                        ["<% out.print(jeuTable[jeuTable.length-1].getIdChanson());%>", <% out.println(jeuTable[jeuTable.length-1].getCount());%>, ""], 
+                                <%  } %>
+                                ]);
                             var view = new google.visualization.DataView(data);
                             view.setColumns([0, 1,
                                 {calc: "stringify",

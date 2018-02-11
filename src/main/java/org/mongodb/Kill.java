@@ -21,7 +21,12 @@ public class Kill {
                     }
                     
                 MusiqueDAO musique = new MusiqueDAO();
-                    String musicTable = musique.findMusicById("5a6c2e9b734d1d630318de9d");
+                Musique[] gg = musique.findMusique("5a6c2e9b734d1d630318de9d","Tsy atakaloko");
+                    for(int i = 0; i < gg.length; i++){
+                        System.out.println("Io leryh: "+gg[i].getArtiste());
+                    }
+                
+                    String musicTable = musique.findParoleById("5a6c2e9b734d1d630318de9d");
                         System.out.println(musicTable);
 
 		//	user.insertUsers("rojoraben.itu@gmail.com", "Rojo", "admin", "Homme", "Malagasy", "1");

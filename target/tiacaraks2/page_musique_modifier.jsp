@@ -41,7 +41,7 @@
             if(insert != null) {
                 String idChanson = request.getParameter("idChanson");
                 out.println(idChanson);
-                String musicById = musique.findMusicById(idChanson);
+                String musicById = musique.findTitreMusicById(idChanson);
                 String paroles = request.getParameter("paroles");
                 out.println(musicById);
                 out.println(paroles);

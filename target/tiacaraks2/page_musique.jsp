@@ -33,9 +33,8 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
         <%
-            String insert = request.getParameter("insert");
             MusiqueDAO musique = new MusiqueDAO();
-            if(insert != null) {
+            if(request.getParameter("artiste") != null && request.getParameter("titre") != null && request.getParameter("fichier") != null && request.getParameter("paroles") != null) {
                 String categorie = request.getParameter("categorie");
                 String artiste = request.getParameter("artiste");
                 String titre = request.getParameter("titre");
@@ -43,9 +42,6 @@
                 String paroles = request.getParameter("paroles");
                 
                 musique.insertMusique(categorie, artiste, titre, fichier, paroles);
-            }
-            else {
-                out.println("Noob");
             }
         %>
 </head>

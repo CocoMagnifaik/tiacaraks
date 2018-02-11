@@ -6,22 +6,12 @@
 package org.mongodb;
 
 import com.mongodb.BasicDBObject;
-import com.mongodb.Block;
 import com.mongodb.DB;
 import com.mongodb.DBCollection;
 import com.mongodb.DBCursor;
 import com.mongodb.DBObject;
-import com.mongodb.MongoClient;
-import com.mongodb.MongoClientURI;
 import com.mongodb.MongoException;
-import com.mongodb.client.MongoCollection;
-import com.mongodb.client.MongoDatabase;
-import com.mongodb.client.model.Accumulators;
-import com.mongodb.client.model.Aggregates;
-import com.mongodb.client.model.Filters;
-import java.util.Arrays;
 import java.util.Vector;
-import org.bson.Document;
 import org.bson.types.ObjectId;
 
 /**
@@ -76,48 +66,27 @@ public class JeuDAO {
             return tabJeu;		
         }
 
-    public Jeu[] getCountStatistique(String idChanson) throws Exception{
-        Jeu[] tabJeu = null;
-        Vector listMusic = new Vector();
-        MongoClient mongo = null;
-        MongoDatabase db = null;
-        try{ 
-            MongoClientURI uri = new MongoClientURI("mongodb://rcj:rcj@ds235877.mlab.com:35877/tiacaraks");
-            mongo = new MongoClient(uri);
-            db = mongo.getDatabase("tiacaraks");
-            MongoCollection table = db.getCollection("jeu");
-                Block<Document> printBlock = document -> System.out.println(document.toJson());
-                table.aggregate(
-                    Arrays.asList(
-                        Aggregates.match(Filters.eq("chanson",idChanson)),
-                        Aggregates.group("$chanson", Accumulators.sum("count", 1)))
-                    ).forEach(printBlock);
-                tabJeu = new Jeu[listMusic.size()];
-                System.out.println("list:");
-        } catch (MongoException e) {
-        }
-        return tabJeu;
-    }
-
         public Jeu[] findJeuWhereChanson(String idChanson) throws Exception {            
             Jeu[] tabJeu = null;
             Vector listMusic = new Vector();
             DBCursor cursor = null;
-            try {
+            int count = 0;
+           try {
                 DB db = mon.getConnection();
                 DBCollection table = db.getCollection("jeu");
-                cursor = table.find();
+            BasicDBObject document = new BasicDBObject();
+            document.put("chanson", idChanson);
+                cursor = table.find(document);
                 DBObject dObject=null;
-                int count = 0;
                 while (cursor.hasNext()) {
                     dObject = cursor.next();
                     String id = String.valueOf((ObjectId)(dObject.get("_id")));
                     String idJoueur = String.valueOf(dObject.get("joueur"));
-                    idChanson = String.valueOf(dObject.get("chanson"));
+                    String chanson = String.valueOf(dObject.get("chanson"));
                     String points = String.valueOf(dObject.get("points"));
-                    Jeu temporaire = new Jeu(id, idJoueur, idChanson, points, count);
-                    listMusic.add(temporaire);
                     count++;
+                    Jeu temporaire = new Jeu(id, idJoueur, chanson, points, count);
+                    listMusic.add(temporaire);
                 }
                 tabJeu = new Jeu[listMusic.size()];
                 listMusic.copyInto(tabJeu);
