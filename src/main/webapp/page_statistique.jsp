@@ -203,11 +203,15 @@
                                 ["Element", "Nombre de jeu", {role: "style"}],
                                 <%  for(int i = 0; i < musicTable.length; i++) {   
                                         jeuTable = jeu.findJeuWhereChanson(musicTable[i].getTitre());
-                                %>
+                                        if(jeuTable.length-1 < 0) { %>
+                                            ["<% out.print(musicTable[i].getTitre());%>", <% out.println("0");%>, ""],
+                                    <%  } 
+                                        else { %>
                                         ["<% out.print(jeuTable[jeuTable.length-1].getIdChanson());%>", <% out.println(jeuTable[jeuTable.length-1].getCount());%>, ""], 
-                                <%  } %>
+                                    <%  } 
+                                    }%>
                                 ]);
-                            var view = new google.visualization.DataView(data);
+                        var view = new google.visualization.DataView(data);
                             view.setColumns([0, 1,
                                 {calc: "stringify",
                                     sourceColumn: 1,

@@ -97,11 +97,12 @@
   var button = document.getElementById('uploadButton')
   var downloadButton = document.getElementById('downloadButton')
   
-  var refDown = storage.ref('Ambondrona - Leo.mp3')
+  var refDown = storage.ref('tiaCaraks.apk')
   
   downloadButton.addEventListener('click',function(){
 	refDown.getDownloadURL().then(function(url){
             console.log("APK download")
+            document.location.href=url
             console.log(url)
 	})
   })
