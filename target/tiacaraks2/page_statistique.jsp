@@ -1,3 +1,4 @@
+<%@page import="org.mongodb.User"%>
 <%@page import="org.mongodb.JeuDAO"%>
 <%@page import="org.mongodb.Jeu"%>
 <%@page import="org.mongodb.Musique"%>
@@ -39,6 +40,8 @@
             MusiqueDAO musique = new MusiqueDAO();
             Musique[] musicTable = musique.listMusique();
                 JeuDAO jeu = new JeuDAO();
+                UserDAO user = new UserDAO();
+                    User[] listUser = user.listUserByFonction("0");
                     Jeu[] jeuTable = null;
         %>
 </head>
@@ -171,7 +174,7 @@
         <div class="col-lg-3 col-xs-6">
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>150</h3>
+              <h3><% out.print(listUser.length);%></h3>
               <p>Nombre de joueurs</p>
             </div>
             <div class="icon">
@@ -184,7 +187,7 @@
       </div>
 
         <div class="row">
-        <section class="col-lg-7 connectedSortable">
+        <section class="col-lg-12 connectedSortable">
           <div class="box box-info">
             <div class="box-header">
               <h3 class="box-title">Statistique</h3>

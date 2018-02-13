@@ -51,6 +51,39 @@ public class UserDAO {
             return tabCustomers;		
         }
 
+        public User[] listUserByFonction(String statuts) throws Exception {            
+            User[] tabCustomers=null;
+            Vector listUser = new Vector();
+            DBCursor cursor = null;
+            try {
+                DB db = mon.getConnection();
+                DBCollection table = db.getCollection("users");
+                BasicDBObject searchQuery = new BasicDBObject();
+                searchQuery.put("statut",statuts);
+                cursor = table.find(searchQuery);
+                DBObject dObject=null;
+                while (cursor.hasNext()) {
+                    dObject = cursor.next();
+                    String id = String.valueOf((ObjectId)(dObject.get("_id")));
+                    String email = String.valueOf(dObject.get("email"));
+                    String pseudo = String.valueOf(dObject.get("pseudo"));
+                    String mdp = String.valueOf(dObject.get("mdp"));
+                    String sexe = String.valueOf(dObject.get("sexe"));
+                    String nationalite = String.valueOf(dObject.get("nationalite"));
+                    String statut = String.valueOf(dObject.get("statut"));
+
+                    System.out.print("ID: "+dObject.get("_id"));
+                    User temporaire = new User(id, email, pseudo, mdp, sexe, nationalite, statut);
+                    listUser.add(temporaire);
+                }
+                tabCustomers = new User[listUser.size()];
+                listUser.copyInto(tabCustomers);
+            } catch(MongoException e){
+                e.printStackTrace();
+            }
+            return tabCustomers;		
+        }
+
         public User[] findUserById(String ids) throws Exception {            
             User[] tabCustomers=null;
             Vector listUser = new Vector();

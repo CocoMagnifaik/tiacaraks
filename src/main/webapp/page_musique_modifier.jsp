@@ -1,3 +1,4 @@
+<%@page import="org.mongodb.User"%>
 <%@page import="org.bson.types.ObjectId"%>
 <%@page import="org.mongodb.Musique"%>
 <%@page import="org.mongodb.MusiqueDAO"%>
@@ -38,6 +39,8 @@
             String insert = request.getParameter("insert");
             MusiqueDAO musique = new MusiqueDAO();
             Musique[] musicTable = musique.listMusique();
+                UserDAO user = new UserDAO();
+                    User[] listUser = user.listUserByFonction("0");
             if(insert != null) {
                 String idChanson = request.getParameter("idChanson");
                 out.println(idChanson);
@@ -178,7 +181,7 @@
         <div class="col-lg-3 col-xs-6">
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>150</h3>
+              <h3><% out.print(listUser.length);%></h3>
               <p>Nombre de joueurs</p>
             </div>
             <div class="icon">

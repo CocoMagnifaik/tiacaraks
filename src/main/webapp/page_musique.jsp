@@ -1,3 +1,4 @@
+<%@page import="org.mongodb.User"%>
 <%@page import="org.mongodb.MusiqueDAO"%>
 <%@page import="org.mongodb.UserDAO"%>
 <!DOCTYPE html>
@@ -34,6 +35,8 @@
 
         <%
             MusiqueDAO musique = new MusiqueDAO();
+                UserDAO user = new UserDAO();
+                    User[] listUser = user.listUserByFonction("0");
             if(request.getParameter("artiste") != null && request.getParameter("titre") != null && request.getParameter("fichier") != null && request.getParameter("paroles") != null) {
                 String categorie = request.getParameter("categorie");
                 String artiste = request.getParameter("artiste");
@@ -174,7 +177,7 @@
         <div class="col-lg-3 col-xs-6">
           <div class="small-box bg-red">
             <div class="inner">
-              <h3>150</h3>
+              <h3><% out.print(listUser.length);%></h3>
               <p>Nombre de joueurs</p>
             </div>
             <div class="icon">
