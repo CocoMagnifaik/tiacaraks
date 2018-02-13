@@ -111,21 +111,25 @@
     </nav>
 </section>
 <div class="cid-qJ9WzbJoW mbr-fullscreen" id="apercu">
-        <div class="container align-center">
-            <div class="row justify-content-md-center">
-                <div class="col-6"></div>
-                <div class="mbr-whites col-md-6" >
-                    <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">TiaCaraks</h1>
-                    <h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-5">
-                        Un jeu fun, <br>fait pour tout le monde !</h3>
-                </div>
+    <div class="container align-center">
+        <div class="row justify-content-md-center">
+            <div class="col-6">
+                </br></br></br>
+                <img src="assets/images/Screenshot.png" style="width:300px" align="left">
+            </div>
+            <div class="mbr-whites col-md-6" >
+                </br></br></br></br></br></br></br>
+                <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">TiaCaraks</h1>
+                <h3 class="mbr-section-subtitle align-center mbr-light pb-3 mbr-fonts-style display-5">
+                    Un jeu fun, <br>fait pour tout le monde !</h3>
             </div>
         </div>
-        <div class="mbr-arrow hidden-sm-down" aria-hidden="true">
-            <a href="#next">
-                <i class="mbri-down mbr-iconfont"></i>
-            </a>
-        </div>
+    </div>
+    <div class="mbr-arrow hidden-sm-down" aria-hidden="true">
+        <a href="#next">
+            <i class="mbri-down mbr-iconfont"></i>
+        </a>
+    </div>
 </div>
 
 <section class="cid-qJ9WzbJoWL mbr-fullscreen" id="header2-f">
