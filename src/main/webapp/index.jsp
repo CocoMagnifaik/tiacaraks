@@ -35,8 +35,12 @@
                 BasicDBObject where = new BasicDBObject();
                 where.put("$and",query);
                 DBObject doc = table.findOne(query);
+                
+                UserDAO fU = new UserDAO();
+                User[] findUser = fU.findUsers(uname, pwd);
+                
                 if(doc != null) {
-                    session.setAttribute("id", request.getParameter("_id"));
+                    session.setAttribute("id", findUser[0].getId());
                     response.sendRedirect("page_musique.jsp");
                 }
                 else {

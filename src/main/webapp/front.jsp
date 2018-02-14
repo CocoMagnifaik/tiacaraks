@@ -1,3 +1,5 @@
+<%@page import="org.mongodb.Musique"%>
+<%@page import="org.mongodb.MusiqueDAO"%>
 <%@page import="org.mongodb.UserDAO"%>
 <!DOCTYPE html>
 <html >
@@ -21,6 +23,8 @@
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
 </head>
         <%
+            MusiqueDAO mus = new MusiqueDAO();
+            Musique[] musique = mus.listMusique();
             UserDAO user = new UserDAO();
             if(request.getParameter("email") != null && request.getParameter("pseudo") != null && request.getParameter("mdp") != null && request.getParameter("sexe") != null && request.getParameter("nationalite") != null) {
                 String email = request.getParameter("email");
@@ -67,15 +71,17 @@
                     </a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link link text-white display-4" href="#header2-h">
+                        <span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>A propos &nbsp;
+                    </a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link link text-white display-4" href="#header2-f">
                         <span class="mbri-edit mbr-iconfont mbr-iconfont-btn"></span>
                         Inscription
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link link text-white display-4" href="#header2-h">
-                        <span class="mbri-search mbr-iconfont mbr-iconfont-btn"></span>A propos &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</a>
-                </li></ul>
+            </ul>
             <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4" id="downloadButton">
                     <span class="mbri-save mbr-iconfont mbr-iconfont-btn "></span>
                     Telecharger</a></div>
@@ -132,6 +138,66 @@
     </div>
 </div>
 
+<section class="cid-qJ9WzbJoWs mbr-fullscreen" id="header2-p">
+    <div class="container align-center">
+        <h2>APERCU DE LA PLAYLIST</h2>
+        <div class="row justify-content-md-center">
+            <div class="col-md-6">
+                <table class="table table-sm table-dark">
+                <% for(int i = 0; i < 5; i++) { %>                        
+                <tbody>
+                    <tr class="table-primary">
+                        <td class="table-info"><img src='assets/images/<% out.print(musique[i].getArtiste()); %>.jpg' width="80px"></br>
+                        </td>
+                        <td><% out.print(musique[i].getArtiste()); %> - 
+                        <% out.print(musique[i].getTitre()); %></br><audio src="music/<% out.print(musique[i].getTitre()); %>.mp3" controls></audio></td>
+                    </tr>
+                </tbody>
+                <% } %>
+                </table>
+            </div>
+            <div class="mbr-whites col-md-6">
+                <table class="table table-sm table-dark">
+                <% for(int i = 5; i < musique.length; i++) { %>                        
+                <tbody>
+                    <tr class="table-dark">
+                        <td class="table-danger"><img src='assets/images/<% out.print(musique[i].getArtiste()); %>.jpg' width="80px"></br>
+                        </td>
+                        <td><% out.print(musique[i].getArtiste()); %> - 
+                        <% out.print(musique[i].getTitre()); %></br><audio src="music/<% out.print(musique[i].getTitre()); %>.mp3" controls></audio></td>
+                    </tr>
+                </tbody>
+                <% } %>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="mbr-arrow hidden-sm-down" aria-hidden="true">
+        <a href="#next">
+            <i class="mbri-down mbr-iconfont"></i>
+        </a>
+    </div>
+</section>
+
+<section class="cid-qJa6MtuOkp mbr-fullscreen" id="header2-h">
+    <div class="container align-left" id="regle">
+	</br></br></br>
+        <div class="row justify-content-md-left">
+            <div class="mbr-white col-md-7">
+                <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">Regle du jeu</h1>
+                
+                <p class="mbr-text pb-3 mbr-fonts-style display-5">Deviner le mot manquant de la chanson qui marche&nbsp;<br>afin de completer les paroles et de gagner des points.<br>Rien de plus facile ;-) Amusez-vous!</p>
+                <div class="mbr-section-btn"><a class="btn btn-md btn-secondary display-4" href=""><span class="mbri-play mbr-iconfont mbr-iconfont-btn"></span>VIDEO DEMO</a></div>
+            </div>
+        </div>
+    </div>
+    <div class="mbr-arrow hidden-sm-down" aria-hidden="true">
+        <a href="#next">
+            <i class="mbri-down mbr-iconfont"></i>
+        </a>
+    </div>
+</section>
+
 <section class="cid-qJ9WzbJoWL mbr-fullscreen" id="header2-f">
     <div class="container align-center">
         <div class="row justify-content-md-center">
@@ -177,31 +243,8 @@
         </a>
     </div>
 </section>
-
-<section class="cid-qJa6MtuOkp mbr-fullscreen" id="header2-h">
-    <div class="container align-left" id="regle">
-	</br></br></br>
-        <div class="row justify-content-md-left">
-            <div class="mbr-white col-md-7">
-                <h1 class="mbr-section-title mbr-bold pb-3 mbr-fonts-style display-1">Regle du jeu</h1>
-                
-                <p class="mbr-text pb-3 mbr-fonts-style display-5">Deviner le mot manquant de la chanson qui marche&nbsp;<br>afin de completer les paroles et de gagner des points.<br>Rien de plus facile ;-) Amusez-vous!</p>
-                <div class="mbr-section-btn"><a class="btn btn-md btn-secondary display-4" href=""><span class="mbri-play mbr-iconfont mbr-iconfont-btn"></span>VIDEO DEMO</a></div>
-            </div>
-        </div>
-    </div>
-    <div class="mbr-arrow hidden-sm-down" aria-hidden="true">
-        <a href="#next">
-            <i class="mbri-down mbr-iconfont"></i>
-        </a>
-    </div>
-</section>
-
+    
 <section class="cid-qJ9WzeYpDo mbr-reveal" id="footer1-g">
-
-    
-
-    
 
     <div class="container">
         <div class="media-container-row content text-white">
@@ -237,7 +280,7 @@
             <div class="media-container-row mbr-white">
                 <div class="col-sm-6 copyright">
                     <p class="mbr-text mbr-fonts-style display-7">
-                        © Copyright 2018 - Cedrick &amp; Tsiory</p>
+                        © Copyright 2018 - Tsiory &amp; Cedrick</p>
                 </div>
                 <div class="col-md-6">
                     
