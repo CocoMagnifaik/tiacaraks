@@ -81,10 +81,16 @@
                         Inscription
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link link text-white display-4" href="#atyO">
+                        <span class="socicon socicon-viber mbr-iconfont mbr-iconfont-btn"></span>
+                        Contacts
+                    </a>
+                </li>
             </ul>
             <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4" id="downloadButton">
                     <span class="mbri-save mbr-iconfont mbr-iconfont-btn "></span>
-                    Telecharger</a></div>
+                    Telecharger APK</a></div>
 <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -244,15 +250,13 @@
     </div>
 </section>
     
-<section class="cid-qJ9WzeYpDo mbr-reveal" id="footer1-g">
+<section class="cid-qJ9WzeYpDo mbr-reveal" id="atyO">
 
     <div class="container">
         <div class="media-container-row content text-white">
             <div class="col-12 col-md-3">
                 <div class="media-wrap">
-                    <a href="https://mobirise.com/">
-                        <img src="assets/images/shure-3300x3000.png" alt="Mobirise" title="">
-                    </a>
+                    <img src="assets/images/shure-3300x3000.png" alt="Mobirise" title="">
                 </div>
             </div>
             <div class="col-12 col-md-3 mbr-fonts-style display-7">
