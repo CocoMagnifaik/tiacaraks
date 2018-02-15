@@ -36,16 +36,17 @@
         <%
             MusiqueDAO musique = new MusiqueDAO();
                     
-            if(request.getParameter("artiste") != null && request.getParameter("titre") != null && request.getParameter("fichier") != null && request.getParameter("paroles") != null) {
+            if(request.getParameter("artiste") != null && request.getParameter("titre") != null && request.getParameter("fichier") != null && request.getParameter("image") != null && request.getParameter("paroles") != null) {
                 String categorie = request.getParameter("categorie");
                 String artiste = request.getParameter("artiste");
                 String titre = request.getParameter("titre");
                 String fichier = request.getParameter("fichier");
+                String image = request.getParameter("image");
                 String paroles = request.getParameter("paroles");
                 String minutage = request.getParameter("minutage");
                 String valiny = request.getParameter("valiny");
                 
-                musique.insertMusique(categorie, artiste, titre, fichier, paroles, minutage, valiny);
+                musique.insertMusique(categorie, artiste, titre, fichier, image, paroles, minutage, valiny);
             }
         %>
 </head>
@@ -116,6 +117,10 @@
                 <div class="form-group">
                     <progress value="0" max="100" id="uploadProgress">0</progress> Veuillez attendre la fin du telechargement du fichier avant d'appuyer sur "Inserer"!
                   <input type="file" class="form-control" name="fichier" id="fichier" placeholder="Fichier">
+                </div>
+                <div class="form-group">
+                    <progress value="0" max="100" id="uploadProgress">0</progress> Veuillez attendre la fin du telechargement de votre image avant d'appuyer sur "Inserer"!
+                  <input type="file" class="form-control" name="image" id="image" placeholder="Image">
                 </div>
                 <div>
                   <textarea class="textarea" placeholder="Paroles" name="paroles" style="width: 100%; height: 125px; font-size: 14px; line-height: 18px; border: 1px solid #dddddd; padding: 10px;"></textarea>
