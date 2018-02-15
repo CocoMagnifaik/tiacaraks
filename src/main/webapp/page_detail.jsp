@@ -8,7 +8,7 @@
 <html>
 <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>TiaCaraks | Statistique</title>
+        <title>TiaCaraks | Details</title>
           <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
           <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
           <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">

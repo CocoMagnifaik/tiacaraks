@@ -46,7 +46,6 @@
     <a href="../java/org/mongodb/Kill.java"></a>
 <div class="wrapper">
     <%@ include file="header.jsp" %>
-  <!-- Left side column. contains the logo and sidebar -->
     <%@ include file="aside.jsp" %>  
 
 

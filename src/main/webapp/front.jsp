@@ -153,10 +153,10 @@
                 <% for(int i = 0; i < 5; i++) { %>                        
                 <tbody>
                     <tr class="table-primary">
-                        <td class="table-info"><img src='assets/images/<% out.print(musique[i].getArtiste()); %>.jpg' width="80px"></br>
+                        <td class="table-info"><img src='<% out.print(musique[i].getImage()); %>' width="80px"></br>
                         </td>
                         <td><% out.print(musique[i].getArtiste()); %> - 
-                        <% out.print(musique[i].getTitre()); %></br><audio src="music/<% out.print(musique[i].getTitre()); %>.mp3" controls></audio></td>
+                        <% out.print(musique[i].getTitre()); %></br><audio src="<% out.print(musique[i].getFichier()); %>" controls></audio></td>
                     </tr>
                 </tbody>
                 <% } %>
@@ -167,10 +167,10 @@
                 <% for(int i = 5; i < musique.length; i++) { %>                        
                 <tbody>
                     <tr class="table-dark">
-                        <td class="table-danger"><img src='assets/images/<% out.print(musique[i].getArtiste()); %>.jpg' width="80px"></br>
+                        <td class="table-danger"><img src='<% out.print(musique[i].getImage()); %>' width="80px"></br>
                         </td>
                         <td><% out.print(musique[i].getArtiste()); %> - 
-                        <% out.print(musique[i].getTitre()); %></br><audio src="music/<% out.print(musique[i].getTitre()); %>.mp3" controls></audio></td>
+                        <% out.print(musique[i].getTitre()); %></br><audio src="<% out.print(musique[i].getFichier()); %>" controls></audio></td>
                     </tr>
                 </tbody>
                 <% } %>
